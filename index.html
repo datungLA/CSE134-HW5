@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <script src="script.js" defer></script>
     <title>Home</title>
 </head>
@@ -20,10 +20,23 @@
             <a href="contact.html">Contact</a> |
             <a href="projects.html">Projects</a> |
             <a href="resume.html">Resume</a>
-
         </nav>
     </header>
+    <search>
+        <label for="site-search">Search Portfolio:</label>
+        <input type="search" id="site-search" name="q" placeholder="Search...">
+        <button type="submit">Go</button>
+    </search>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="blue" />
+    </svg>
     <main>
+        <section>
+            <h3>Featured Information</h2>
+                <highlight-box>
+                    <p>This is an important highlight in my portfolio.</p>
+                </highlight-box>
+        </section>
         <section>
             <h3>Introduction</h3>
             <p><strong>Hi, I'm a UCSD Computer Science student.</strong> I specialized in <em>web development, database
@@ -38,12 +51,25 @@
                 <img src="./assets/images/graphingCalculator.png" alt="Project Preview" width="200" height="150">
                 <figcaption>Graphing Calculator built in C++.</figcaption>
             </figure>
-        </section>
-    </main>
-    <footer>
-        <address>Contact me at: <a href="mailto:d1ung@ucsd.com">d1ung@ucsd.com</a></address>
-        <span style="font-size: 0.8em;">&copy; 2025 My Portfolio</span>
-    </footer>
+            <h3>Audio Introduction</h3>
+            <audio controls>
+                <source src="/assets/audio/intro.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <h3>Canvas Demo</h3>
+            <canvas id="demoCanvas" width="200" height="100"></canvas>
+            <h3>Video Presentation</h3>
+            <video controls width="320">
+                <source src="/assets/video/intro.mp4" type="video/mp4">
+            </video>
+        </section </main>
+        <noscript>
+            <p class="noscript-warning">JavaScript is disabled. Some site features may not work correctly.</p>
+        </noscript>
+        <footer>
+            <address>Contact me at: <a href="mailto:d1ung@ucsd.com">d1ung@ucsd.com</a></address>
+            <span style="font-size: 0.8em;">&copy; 2025 My Portfolio</span>
+        </footer>
 </body>
 
 </html>

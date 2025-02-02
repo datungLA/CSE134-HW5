@@ -21,8 +21,12 @@
 
     <main>
         <section>
-            <h2>Academic Journey</h2>
-            <p>I transferred from <b>Pasadena City College</b> to UCSD, majoring in Computer Science.</p>
+            <section>
+                <h2>Academic Journey</h2>
+                <p>I transferred from <b>Pasadena City College</b> to UCSD, majoring in Computer Science.</p>
+                <p>My focus is on <dfn>Full-Stack Web Development</dfn>, specializing in JavaScript and React.</p>
+                <p>I initially considered a major in <del>Electrical Engineering</del> <ins>Computer Science</ins>.</p>
+            </section>
             <dl>
                 <dt><abbr title="University of California, San Diego">UCSD</abbr></dt>
                 <dd>Bachelor's Degree in Computer Science</dd>
@@ -39,8 +43,22 @@
                 <li>Tools: Git, Docker, Netlify</li>
             </ul>
         </section>
+        <figure>
+            <picture>
+                <source srcset="profile_large.jpg" media="(min-width: 800px)">
+                <source srcset="profile_medium.jpg" media="(min-width: 400px)">
+                <img src="profile_small.jpg" alt="My Profile Picture">
+            </picture>
+            <figcaption>My Journey from Pasadena City College to UCSD</figcaption>
+        </figure>
+        <dialog id="extra-info">
+            <p>This site is built with semantic HTML and accessible design principles.</p>
+            <button>Close</button>
+        </dialog>
     </main>
-
+    <noscript>
+        <p class="noscript-warning">JavaScript is disabled. Some site features may not work correctly.</p>
+    </noscript>
     <footer>
         <p><cite>Adapted from my personal statement</cite></p>
     </footer>

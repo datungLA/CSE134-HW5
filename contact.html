@@ -10,26 +10,68 @@
 <body>
     <header>
         <h1>Contact Me</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="projects.html">Projects</a> |
+            <a href="resume.html">Resume</a> |
+            <a href="aboutme.html">About Me</a>
+        </nav>
     </header>
 
     <main>
         <form action="submit_form.php" method="post">
             <fieldset>
-                <legend>Send a Message</legend>
+                <legend>Contact Me</legend>
+
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required><br>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required><br>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea><br>
+                <label for="topic">Select Topic:</label>
+                <select id="topic" name="topic">
+                    <optgroup label="Professional">
+                        <option value="job">Job Opportunity</option>
+                        <option value="internship">Internship Inquiry</option>
+                    </optgroup>
+                    <optgroup label="General">
+                        <option value="collaboration">Collaboration</option>
+                        <option value="feedback">Website Feedback</option>
+                    </optgroup>
+                </select><br>
+
+                <label for="suggestions">Suggestions:</label>
+                <input list="suggestions-list" id="suggestions" name="suggestions">
+                <datalist id="suggestions-list">
+                    <option value="Improve UI"></option>
+                    <option value="Add more projects"></option>
+                    <option value="Include blog section"></option>
+                </datalist><br>
+
+                <p>Use <kbd>Ctrl + Enter</kbd> to submit quickly.</p>
 
                 <button type="submit">Send</button>
             </fieldset>
         </form>
+        <div>
+            <details>
+                <summary>More Contact Info</summary>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/dat-ung">MyProfile</a></p>
+                <p>GitHub: <a href="https://github.com/datungLA">MyRepos</a></p>
+            </details>
+        </div>
+        <h2>Frequently Asked Questions</h2>
+        <template id="faq-template">
+            <details>
+                <summary>How can I contact you?</summary>
+                <p>You can email me at <a href="mailto:d1ung@ucsd.edu">d1ung@ucsd.edu</a></p>
+            </details>
+        </template>
     </main>
-
+    <noscript>
+        <p class="noscript-warning">JavaScript is disabled. Some site features may not work correctly.</p>
+    </noscript>
     <footer>
         <address>Email: <a href="mailto:d1ung@ucsd.edu">d1ung@ucsd.edu</a></address>
     </footer>
