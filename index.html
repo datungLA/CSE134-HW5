@@ -38,6 +38,10 @@
                 </highlight-box>
         </section>
         <section>
+            <h3>Custom Hello World Element</h3>
+            <hello-world></hello-world>
+        </section>
+        <section>
             <h3>Introduction</h3>
             <p><strong>Hi, I'm a UCSD Computer Science student.</strong> I specialized in <em>web development, database
                     management, and low-level programming.</em></p>
@@ -70,6 +74,16 @@
             <address>Contact me at: <a href="mailto:d1ung@ucsd.com">d1ung@ucsd.com</a></address>
             <span style="font-size: 0.8em;">&copy; 2025 My Portfolio</span>
         </footer>
+
+        <script>
+            class HelloWorld extends HTMLElement {
+                constructor() {
+                    super();
+                    console.log("Hello world!");
+                }
+            }
+            customElements.define('hello-world', HelloWorld);
+        </script>
 </body>
 
 </html>
