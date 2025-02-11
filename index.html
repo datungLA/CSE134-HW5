@@ -4,52 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
     <title>Home</title>
 </head>
 
 <body>
     <header>
-        <hgroup>
-            <h1>Welcome to my Portfolio</h1>
-            <h2>Computer Science Major | UCSD Student</h2>
-        </hgroup>
-        <nav>
-            <a href="aboutme.html">About Me</a> |
-            <a href="contact.html">Contact</a> |
-            <a href="projects.html">Projects</a> |
-            <a href="resume.html">Resume</a>
+        <a href="#intro-jt" id="logo">Dat.coder</a>
+        <nav class="nav-center">
+            <a href="#about-me-jt">About Me</a>
+            <a href="#project-jt">Projects</a>
+            <a href="#resume">Resume</a>
+        </nav>
+        <nav class="nav-right">
+            <a href="#contact-me">Contact Me</a>
         </nav>
     </header>
-    <search>
-        <label for="site-search">Search Portfolio:</label>
-        <input type="search" id="site-search" name="q" placeholder="Search...">
-        <button type="submit">Go</button>
-    </search>
-    <svg width="100" height="100">
-        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="blue" />
-    </svg>
     <main>
-        <section>
-            <h3>Featured Information</h2>
-                <highlight-box>
-                    <p>This is an important highlight in my portfolio.</p>
-                </highlight-box>
-        </section>
-        <section>
-            <h3>Custom Hello World Element</h3>
-            <hello-world></hello-world>
-        </section>
-        <section>
-            <h3>Introduction</h3>
-            <p><strong>Hi, I'm a UCSD Computer Science student.</strong> I specialized in <em>web development, database
-                    management, and low-level programming.</em></p>
-        </section>
-        <blockquote>
-            "Learning is a lifelong process that only ends when you stop seeking knowledge."
-        </blockquote>
-        <section>
+        <a id="intro-jt"></a>
+        <div class="intro">
+            <div class="intro-content">
+                <h2>Hi! My name is</h2>
+                <h2 style="margin-left: 10px;"><strong style="color:rgb(244, 115, 3); font-size: 65px;">Dat Ung</strong>
+                </h2>
+                <h2>Computer Science Senior at UCSD.</h2>
+                <p>Specialized in <em>web development, database management, and low-level programming.</em></p>
+                <blockquote>
+                    "Learning is a lifelong process that only ends when you stop seeking knowledge."
+                </blockquote>
+                <a href="/assets/pdfs/DatUngResume-Oct-2023.pdf" id="download-resume">Download Resume</a><br>
+                <section class="icon">
+                    <a href="https://www.linkedin.com/in/dat-ung" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/datungLA" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nickung1111/" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </section>
+            </div>
+            <img src="./assets/images/profile.png" alt="profile picture" class="profile-image">
+        </div>
+        <a id="project-jt"></a>
+        <div class="projects" id="project">
             <h3>Featured Project</h3>
             <figure>
                 <img src="./assets/images/graphingCalculator.png" alt="Project Preview" width="200" height="150">
@@ -60,30 +61,113 @@
                 <source src="/assets/audio/intro.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
-            <h3>Canvas Demo</h3>
-            <canvas id="demoCanvas" width="200" height="100"></canvas>
             <h3>Video Presentation</h3>
             <video controls width="320">
                 <source src="/assets/video/intro.mp4" type="video/mp4">
             </video>
-        </section </main>
-        <noscript>
-            <p class="noscript-warning">JavaScript is disabled. Some site features may not work correctly.</p>
-        </noscript>
-        <footer>
-            <address>Contact me at: <a href="mailto:d1ung@ucsd.com">d1ung@ucsd.com</a></address>
-            <span style="font-size: 0.8em;">&copy; 2025 My Portfolio</span>
-        </footer>
+        </div>
+        <a id="about-me-jt"></a>
+        <div class="about-me" id="about-me">
+            <section>
+                <h2>Academic Journey</h2>
+                <p>I transferred from <b>Pasadena City College</b> to UCSD, majoring in Computer Science.</p>
+                <p>My focus is on <dfn>Full-Stack Web Development</dfn>, specializing in JavaScript and React.</p>
+                <p>I initially considered a major in <del>Electrical Engineering</del> <ins>Computer Science</ins>.
+                </p>
+            </section>
+            <dl>
+                <dt><abbr title="University of California, San Diego">UCSD</abbr></dt>
+                <dd>Bachelor's Degree in Computer Science</dd>
+                <dt>PCC</dt>
+                <dd>Completed foundational courses in programming and mathematics.</dd>
+            </dl>
+            <section>
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>Languages: C++, JavaScript, Python, SQL, Assembly</li>
+                    <li>Frameworks: React, Node.js</li>
+                    <li>Tools: Git, Docker, Netlify</li>
+                </ul>
+            </section>
+            <figure>
+                <picture>
+                    <source srcset="/assets/images/pcc.png" media="(min-width: 800px)">
+                    <source srcset="/assets/images/ucsd.png" media="(min-width: 400px)">
+                    <img src="/assets/images/profile.png" alt="My Profile Picture">
+                </picture>
+                <figcaption>My Journey from Pasadena City College to UCSD</figcaption>
+            </figure>
+            <dialog id="extra-info">
+                <p>This site is built with semantic HTML and accessible design principles.</p>
+                <button>Close</button>
+            </dialog>
+        </div>
+        <a id="contact-me-jt"></a>
+        <div class="contact-me" id="contact-me">
+            <form action="submit_form.php" method="post">
+                <fieldset>
+                    <legend>Contact Me</legend>
 
-        <script>
-            class HelloWorld extends HTMLElement {
-                constructor() {
-                    super();
-                    console.log("Hello world!");
-                }
-            }
-            customElements.define('hello-world', HelloWorld);
-        </script>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="topic">Select Topic:</label>
+                    <select id="topic" name="topic">
+                        <optgroup label="Professional">
+                            <option value="job">Job Opportunity</option>
+                            <option value="internship">Internship Inquiry</option>
+                        </optgroup>
+                        <optgroup label="General">
+                            <option value="collaboration">Collaboration</option>
+                            <option value="feedback">Website Feedback</option>
+                        </optgroup>
+                    </select><br>
+
+                    <label for="suggestions">Suggestions:</label>
+                    <input list="suggestions-list" id="suggestions" name="suggestions">
+                    <datalist id="suggestions-list">
+                        <option value="Improve UI"></option>
+                        <option value="Add more projects"></option>
+                        <option value="Include blog section"></option>
+                    </datalist><br>
+
+                    <p>Use <kbd>Ctrl + Enter</kbd> to submit quickly.</p>
+
+                    <button type="submit">Send</button>
+                </fieldset>
+            </form>
+            <div>
+                <details>
+                    <summary>More Contact Info</summary>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/dat-ung">MyProfile</a></p>
+                    <p>GitHub: <a href="https://github.com/datungLA">MyRepos</a></p>
+                </details>
+            </div>
+            <h2>Frequently Asked Questions</h2>
+            <template id="faq-template">
+                <details>
+                    <summary>How can I contact you?</summary>
+                    <p>You can email me at <a href="mailto:d1ung@ucsd.edu">d1ung@ucsd.edu</a></p>
+                </details>
+            </template>
+        </div>
+        <a id="resume-jt"></a>
+        <div class="resume" id="resume">
+            <iframe src="/assets/pdfs/DatUngResume-Oct-2023.pdf" width="100%" height="600px"></iframe>
+            <p>Download: <a href="/assets/pdfs/DatUngResume-Oct-2023.pdf"><i>Click here</i></a></p>
+
+            <aside>
+                <p>"A well-organized resume is a key to success." - Hiring Manager</p>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <address>Contact me at: <a href="mailto:d1ung@ucsd.com">d1ung@ucsd.com</a></address>
+        <span style="font-size: 0.8em;">&copy; 2025 My Portfolio</span>
+    </footer>
 </body>
 
 </html>

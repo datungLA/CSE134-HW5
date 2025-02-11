@@ -1,3 +1,113 @@
-highlight-box {
-    background-color: lightblue;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+header #logo {
+    font-size: 60px;
+    margin-left: 40px;
+    color: rgb(244, 115, 3);
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(244, 115, 3);
+}
+
+.nav-center a:hover {
+    color: black;
+}
+
+.nav-center {
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.nav-right a {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    font-size: 25px;
+    margin-right: 100px;
+    color: rgb(244, 115, 3);
+}
+
+.nav-right a:hover {
+    border: 2px solid rgb(244, 115, 3);
+    background-color: rgb(244, 115, 3);
+    color: #333;
+}
+
+#project-jt,
+#about-me-jt,
+#contact-me-jt,
+#resume-jt,
+#intro-jt {
+    scroll-margin-top: 100px;
+}
+
+.intro {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.intro-content {
+    flex: 1;
+    max-width: 50%;
+    font-size: 30px;
+}
+
+.profile-image {
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#download-resume {
+    padding: 3px 6px;
+    border-radius: 8px;
+    color: rgb(244, 115, 3);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 25px;
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
+}
+
+#download-resume:hover {
+    border: 2px solid rgb(244, 115, 3);
+    background-color: rgb(244, 115, 3);
+    color: #333;
+}
+
+.icon {
+    font-size: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.icon a:visited {
+    color: black;
 }
