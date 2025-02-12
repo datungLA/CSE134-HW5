@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+
     <script src="script.js" defer></script>
     <title>Home</title>
 </head>
@@ -16,10 +18,10 @@
         <nav class="nav-center">
             <a href="#about-me-jt">About Me</a>
             <a href="#project-jt">Projects</a>
-            <a href="#resume">Resume</a>
+            <a href="#resume-jt">Resume</a>
         </nav>
         <nav class="nav-right">
-            <a href="#contact-me">Contact Me</a>
+            <a href="#contact-me-jt">Contact Me</a>
         </nav>
     </header>
     <main>
@@ -50,24 +52,37 @@
             <img src="./assets/images/profile.png" alt="profile picture" class="profile-image">
         </div>
         <a id="project-jt"></a>
-        <div class="projects" id="project">
-            <h3>Featured Project</h3>
-            <figure>
-                <img src="./assets/images/graphingCalculator.png" alt="Project Preview" width="200" height="150">
-                <figcaption>Graphing Calculator built in C++.</figcaption>
-            </figure>
-            <h3>Audio Introduction</h3>
-            <audio controls>
-                <source src="/assets/audio/intro.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
-            <h3>Video Presentation</h3>
-            <video controls width="320">
-                <source src="/assets/video/intro.mp4" type="video/mp4">
-            </video>
+        <div class="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-container">
+                    <div class="project-info">
+                        <h1>Graphing Calculator</h1>
+                        <p>A calculator that plots mathematical functions, built using C++.</p>
+                        <p><strong>Date:</strong> January 2022</p>
+                        <p><strong>Languages Used:</strong> C++</p>
+                        <p><strong>Outcome:</strong> Successfully implemented a GUI-based plotting tool.</p>
+                    </div>
+                    <div class="project-media">
+                        <img src="./assets/images/graphingCalculator.png" alt="Graphing Calculator Preview">
+                    </div>
+                </div>
+                <div class="project-container">
+                    <div class="project-info">
+                        <h1>Web Marketplace</h1>
+                        <p>A UCSD student marketplace for buying and selling items.</p>
+                        <p><strong>Date:</strong> November 2024</p>
+                        <p><strong>Languages Used:</strong> React, typescript.js, SQL</p>
+                        <p><strong>Outcome:</strong> A fully functional marketplace with authentication.</p>
+                    </div>
+                    <div class="project-media">
+                        <img src="./assets/images/webProject.png" alt="Web Marketplace Preview">
+                    </div>
+                </div>
+            </div>
         </div>
         <a id="about-me-jt"></a>
-        <div class="about-me" id="about-me">
+        <div class="about-me">
             <section>
                 <h2>Academic Journey</h2>
                 <p>I transferred from <b>Pasadena City College</b> to UCSD, majoring in Computer Science.</p>
@@ -103,62 +118,51 @@
             </dialog>
         </div>
         <a id="contact-me-jt"></a>
-        <div class="contact-me" id="contact-me">
-            <form action="submit_form.php" method="post">
-                <fieldset>
-                    <legend>Contact Me</legend>
+        <div class="contact-me">
+            <h2>Contact Me</h2>
+            <div class="contact-container">
+                <form action="submit_form.php" method="post">
+                    <fieldset>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe">
 
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="johndoe@ucsd.edu" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br>
+                        <label for="topic">Select Topic:</label>
+                        <select id="topic" name="topic">
+                            <optgroup label="Professional">
+                                <option value="job">Job Opportunity</option>
+                                <option value="internship">Internship Inquiry</option>
+                            </optgroup>
+                            <optgroup label="General">
+                                <option value="collaboration">Collaboration</option>
+                                <option value="feedback">Website Feedback</option>
+                            </optgroup>
+                        </select>
+                        <label for="suggestions">Suggestions:</label>
+                        <input list="suggestions-list" id="suggestions" placeholder="anything..." name="suggestions">
+                        <datalist id="suggestions-list">
+                            <option value="Improve UI"></option>
+                            <option value="Add more projects"></option>
+                            <option value="Include blog section"></option>
+                        </datalist>
 
-                    <label for="topic">Select Topic:</label>
-                    <select id="topic" name="topic">
-                        <optgroup label="Professional">
-                            <option value="job">Job Opportunity</option>
-                            <option value="internship">Internship Inquiry</option>
-                        </optgroup>
-                        <optgroup label="General">
-                            <option value="collaboration">Collaboration</option>
-                            <option value="feedback">Website Feedback</option>
-                        </optgroup>
-                    </select><br>
-
-                    <label for="suggestions">Suggestions:</label>
-                    <input list="suggestions-list" id="suggestions" name="suggestions">
-                    <datalist id="suggestions-list">
-                        <option value="Improve UI"></option>
-                        <option value="Add more projects"></option>
-                        <option value="Include blog section"></option>
-                    </datalist><br>
-
-                    <p>Use <kbd>Ctrl + Enter</kbd> to submit quickly.</p>
-
-                    <button type="submit">Send</button>
-                </fieldset>
-            </form>
-            <div>
-                <details>
-                    <summary>More Contact Info</summary>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/dat-ung">MyProfile</a></p>
-                    <p>GitHub: <a href="https://github.com/datungLA">MyRepos</a></p>
-                </details>
+                        <button type="submit">Send</button>
+                    </fieldset>
+                </form>
+                <div class="FAQ">
+                    <h3>Frequently Asked Questions</h3>
+                    <details open>
+                        <summary>How can I contact you?</summary>
+                        <p>You can email me at <a href="mailto:d1ung@ucsd.edu">d1ung@ucsd.edu</a></p>
+                    </details>
+                </div>
             </div>
-            <h2>Frequently Asked Questions</h2>
-            <template id="faq-template">
-                <details>
-                    <summary>How can I contact you?</summary>
-                    <p>You can email me at <a href="mailto:d1ung@ucsd.edu">d1ung@ucsd.edu</a></p>
-                </details>
-            </template>
         </div>
         <a id="resume-jt"></a>
         <div class="resume" id="resume">
             <iframe src="/assets/pdfs/DatUngResume-Oct-2023.pdf" width="100%" height="600px"></iframe>
-            <p>Download: <a href="/assets/pdfs/DatUngResume-Oct-2023.pdf"><i>Click here</i></a></p>
-
             <aside>
                 <p>"A well-organized resume is a key to success." - Hiring Manager</p>
             </aside>
