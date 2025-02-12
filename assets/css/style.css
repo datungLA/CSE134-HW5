@@ -1,6 +1,7 @@
 :root {
     --orange: rgb(244, 115, 3);
-    --retro-font: 'Press Start 2P', Arial, sans-serif;
+    --retro-font: 'Press Start 2P', sans-serif, Arial;
+
 }
 
 * {
@@ -132,7 +133,7 @@ header nav a {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: rgb(244, 115, 3);
     margin-bottom: 50px;
@@ -152,6 +153,8 @@ header nav a {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background-color: #333;
+    font-size: 1.3em;
 }
 
 .project-info {
