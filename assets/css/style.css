@@ -10,16 +10,34 @@
     box-sizing: border-box;
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 header {
     width: 100%;
-    height: 70px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
-    overflow: hidden;
     background-color: white;
+    z-index: 1000;
+}
+
+header:has(.nav-right a) {
+    background-color: black;
 }
 
 header #logo {
@@ -27,6 +45,11 @@ header #logo {
     margin-left: 40px;
     text-decoration: none;
     color: var(--orange, orange);
+    transition: transform 0.3s ease-in-out;
+}
+
+header #logo:hover {
+    transform: rotate(3deg);
 }
 
 header nav a {
@@ -35,7 +58,7 @@ header nav a {
 }
 
 .nav-center a:hover {
-    color: black;
+    color: white;
 }
 
 .nav-center {
@@ -52,10 +75,9 @@ header nav a {
     background-color: white;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
-    font-size: 25px;
+    font-size: 30px;
     margin-right: 100px;
     color: var(--orange, orange);
-    font-family: var(--retro-font);
 }
 
 .nav-right a:hover {
@@ -115,6 +137,7 @@ header nav a {
     font-size: 40px;
     display: flex;
     gap: 20px;
+    color: black;
 }
 
 .icon a:visited {
@@ -155,6 +178,11 @@ header nav a {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     background-color: #333;
     font-size: 1.3em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-container:hover {
+    animation: pulse 1s ease-in-out;
 }
 
 .project-info {
@@ -182,6 +210,25 @@ header nav a {
 
 .about-me {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-me h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(244, 115, 3);
+    margin-bottom: 50px;
+}
+
+.about-me div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    height: 80dvh;
+    width: 80dvw;
 }
 
 .contact-me {
@@ -197,10 +244,11 @@ header nav a {
 }
 
 .contact-me h2 {
-    color: var(--orange, orange);
     margin-bottom: 60px;
-    font-size: 60px;
     text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(244, 115, 3);
 }
 
 .contact-container {
@@ -238,17 +286,15 @@ form button {
     width: 60px;
     height: 40px;
     border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
-
 
 form button:hover {
     background-color: orange;
-    border-radius: 10px;
 }
 
 .contact-container .FAQ {
     flex: 1;
-    /* Makes FAQ take half the space */
     max-width: 500px;
 }
 
@@ -267,4 +313,87 @@ form button:hover {
 
 .resume {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.resume details {
+    font-size: 30px;
+    width: 100%;
+    height: 600px;
+    padding-left: 100px;
+}
+
+.resume aside {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(244, 115, 3);
+    padding-bottom: 20px;
+}
+
+footer {
+    background-color: black;
+    height: 10vh;
+    text-align: center;
+    align-content: center;
+    font-size: 25px;
+    color: white;
+}
+
+footer a {
+    color: var(--orange, orange);
+
+}
+
+footer a {
+    color: var(--orange, orange);
+}
+
+.wider-color {
+    color: white;
+    color: color(display-p3 0.8 0.6023 0.6369);
+}
+
+.mixed-color {
+    padding: 10px;
+    background-color: brown;
+    background-color: color-mix(in srgb, white 30%, black 70%);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-center,
+    .nav-right {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 5%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-me div {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }

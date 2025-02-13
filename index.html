@@ -49,15 +49,15 @@
                     </a>
                 </section>
             </div>
-            <img src="./assets/images/profile.png" alt="profile picture" class="profile-image">
+            <img src="./assets/images/profile.png" alt="Profile Picture" class="profile-image">
         </div>
         <a id="project-jt"></a>
         <div class="projects">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-container">
-                    <div class="project-info">
-                        <h1>Graphing Calculator</h1>
+                    <div class="project-info mixed-color">
+                        <h1 class="wider-color">Graphing Calculator</h1>
                         <p>A calculator that plots mathematical functions, built using C++.</p>
                         <p><strong>Date:</strong> January 2022</p>
                         <p><strong>Languages Used:</strong> C++</p>
@@ -68,8 +68,8 @@
                     </div>
                 </div>
                 <div class="project-container">
-                    <div class="project-info">
-                        <h1>Web Marketplace</h1>
+                    <div class="project-info mixed-color">
+                        <h1 class="wider-color">Web Marketplace</h1>
                         <p>A UCSD student marketplace for buying and selling items.</p>
                         <p><strong>Date:</strong> November 2024</p>
                         <p><strong>Languages Used:</strong> React, typescript.js, SQL</p>
@@ -83,39 +83,42 @@
         </div>
         <a id="about-me-jt"></a>
         <div class="about-me">
-            <section>
-                <h2>Academic Journey</h2>
-                <p>I transferred from <b>Pasadena City College</b> to UCSD, majoring in Computer Science.</p>
-                <p>My focus is on <dfn>Full-Stack Web Development</dfn>, specializing in JavaScript and React.</p>
-                <p>I initially considered a major in <del>Electrical Engineering</del> <ins>Computer Science</ins>.
-                </p>
-            </section>
-            <dl>
-                <dt><abbr title="University of California, San Diego">UCSD</abbr></dt>
-                <dd>Bachelor's Degree in Computer Science</dd>
-                <dt>PCC</dt>
-                <dd>Completed foundational courses in programming and mathematics.</dd>
-            </dl>
-            <section>
-                <h2>Technical Skills</h2>
-                <ul>
-                    <li>Languages: C++, JavaScript, Python, SQL, Assembly</li>
-                    <li>Frameworks: React, Node.js</li>
-                    <li>Tools: Git, Docker, Netlify</li>
-                </ul>
-            </section>
-            <figure>
-                <picture>
-                    <source srcset="/assets/images/pcc.png" media="(min-width: 800px)">
-                    <source srcset="/assets/images/ucsd.png" media="(min-width: 400px)">
-                    <img src="/assets/images/profile.png" alt="My Profile Picture">
-                </picture>
-                <figcaption>My Journey from Pasadena City College to UCSD</figcaption>
-            </figure>
-            <dialog id="extra-info">
-                <p>This site is built with semantic HTML and accessible design principles.</p>
-                <button>Close</button>
-            </dialog>
+            <h2>About Me</h2>
+            <div>
+                <section>
+                    <h3>Academic Journey</h3>
+                    <p>I transferred from <b>Pasadena City College</b> to UCSD, majoring in Computer Science.</p>
+                    <p>My focus is on <dfn>Full-Stack Web Development</dfn>, specializing in JavaScript and React.</p>
+                    <p>I initially considered a major in <del>Electrical Engineering</del> <ins>Computer Science</ins>.
+                    </p>
+                </section>
+                <dl>
+                    <dt><abbr title="University of California, San Diego">UCSD</abbr></dt>
+                    <dd>Bachelor's Degree in Computer Science</dd>
+                    <dt>PCC</dt>
+                    <dd>Completed foundational courses in programming and mathematics.</dd>
+                </dl>
+                <section>
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Languages: C++, JavaScript, Python, SQL, Assembly</li>
+                        <li>Frameworks: React, Node.js</li>
+                        <li>Tools: Git, Docker, Netlify</li>
+                    </ul>
+                </section>
+                <figure>
+                    <picture>
+                        <source srcset="/assets/images/pcc.png" media="(min-width: 800px)">
+                        <source srcset="/assets/images/ucsd.png" media="(min-width: 400px)">
+                        <img src="/assets/images/profile.png" alt="My Profile Picture">
+                    </picture>
+                    <figcaption>My Journey from Pasadena City College to UCSD</figcaption>
+                </figure>
+                <dialog id="extra-info">
+                    <p>This site is built with semantic HTML and accessible design principles.</p>
+                    <button>Close</button>
+                </dialog>
+            </div>
         </div>
         <a id="contact-me-jt"></a>
         <div class="contact-me">
@@ -162,10 +165,13 @@
         </div>
         <a id="resume-jt"></a>
         <div class="resume" id="resume">
-            <iframe src="/assets/pdfs/DatUngResume-Oct-2023.pdf" width="100%" height="600px"></iframe>
             <aside>
                 <p>"A well-organized resume is a key to success." - Hiring Manager</p>
             </aside>
+            <details>
+                <summary>Resume</summary>
+                <iframe src="/assets/pdfs/DatUngResume-Oct-2023.pdf" width="98%" height="700px"></iframe>
+            </details>
         </div>
     </main>
     <footer>
