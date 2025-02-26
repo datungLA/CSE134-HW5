@@ -344,6 +344,16 @@ header {
         .info-message {
             color: lightgray;
         }
+
+        input:valid,
+        textarea:valid {
+            border: none;
+        }
+
+        input:invalid,
+        textarea:invalid {
+            border: 2px solid red;
+        }
     }
 
     .FAQ {
