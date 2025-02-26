@@ -73,6 +73,7 @@ header {
     }
 
     .nav-right a {
+        display: inline-block;
         padding: 10px 20px;
         border-radius: 8px;
         background-color: white;
@@ -82,12 +83,14 @@ header {
         margin-right: 100px;
         color: var(--orange, orange);
         font-family: var(--retro-font, sans-serif);
+        border: 2px solid transparent;
     }
 
     .nav-right a:hover {
         border: 2px solid var(--orange, orange);
         background-color: var(--orange, orange);
         color: #333;
+        border-radius: 8px;
     }
 
 }

@@ -125,32 +125,19 @@
         <div class="contact-me">
             <h2>Contact Me</h2>
             <div class="contact-container">
-                <form action="submit_form.php" method="post">
+                <form action="https://httpbin.org/post" method="post">
                     <fieldset>
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe">
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
 
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" placeholder="johndoe@ucsd.edu" required>
 
-                        <label for="topic">Select Topic:</label>
-                        <select id="topic" name="topic">
-                            <optgroup label="Professional">
-                                <option value="job">Job Opportunity</option>
-                                <option value="internship">Internship Inquiry</option>
-                            </optgroup>
-                            <optgroup label="General">
-                                <option value="collaboration">Collaboration</option>
-                                <option value="feedback">Website Feedback</option>
-                            </optgroup>
-                        </select>
-                        <label for="suggestions">Suggestions:</label>
-                        <input list="suggestions-list" id="suggestions" placeholder="anything..." name="suggestions">
-                        <datalist id="suggestions-list">
-                            <option value="Improve UI"></option>
-                            <option value="Add more projects"></option>
-                            <option value="Include blog section"></option>
-                        </datalist>
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" name="comments" rows="4" placeholder="Enter your message here..."
+                            required></textarea>
+
+                        <input type="hidden" name="possible_bot" value="true">
 
                         <button type="submit">Send</button>
                     </fieldset>
