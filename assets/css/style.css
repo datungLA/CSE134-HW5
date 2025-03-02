@@ -337,22 +337,26 @@ header {
             text-align: center;
         }
 
-        .error-message {
-            color: red;
-        }
-
-        .info-message {
-            color: lightgray;
-        }
-
         input:valid,
         textarea:valid {
             border: none;
         }
 
-        input:invalid,
-        textarea:invalid {
+        input.invalid,
+        textarea.invalid {
             border: 2px solid red;
+            background-color: rgba(255, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+
+        .info-message {
+            color: lightgray;
+            font-size: 14px;
         }
     }
 
