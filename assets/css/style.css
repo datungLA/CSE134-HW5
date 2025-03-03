@@ -1,7 +1,19 @@
 :root {
     --orange: rgb(244, 115, 3);
     --retro-font: 'Press Start 2P', sans-serif, Arial;
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: rgb(244, 115, 3);
+}
 
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
 }
 
 * {

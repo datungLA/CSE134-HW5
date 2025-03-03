@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <script src="./assets/js/script.js" defer></script>
     <title>Home</title>
+    <noscript>
+        <style>
+            #theme-toggle {
+                display: none;
+            }
+        </style>
+        <p style="text-align: center; color: red;">
+            Note: Theme toggle functionality requires JavaScript to be enabled.
+        </p>
+    </noscript>
 </head>
 
 <body>
@@ -22,6 +32,10 @@
         </nav>
         <nav class="nav-right">
             <a href="#contact-me-jt">Contact Me</a>
+            <button id="theme-toggle" aria-label="Toggle Theme"
+                style="background: none; border: none; font-size: 3rem; cursor: pointer; color: white; margin-right: 20px">
+                &#9728;
+            </button>
         </nav>
     </header>
     <main>
