@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "name": "Hello Calculator",
+            "name": "Remote Graphing Calculator",
             "date": "January 2022",
             "image": "./assets/images/graphingCalculator.png",
             "description": "A calculator that plots mathematical functions, built using C++.",
@@ -9,7 +9,7 @@
             "outcome": "Successfully implemented a GUI-based plotting tool."
         },
         {
-            "name": "Web Marketplace",
+            "name": "Remote Web Marketplace",
             "date": "November 2024",
             "image": "./assets/images/webProject.png",
             "description": "A UCSD student marketplace for buying and selling items.",

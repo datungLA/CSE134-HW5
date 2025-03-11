@@ -152,28 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-// Example local data array (Option A). 
-// If using localStorage, see Option B code snippet above.
-const localProjects = [
-    {
-        "name": "Local Graphing Calculator",
-        "date": "January 2022",
-        "image": "./assets/images/graphingCalculator.png",
-        "description": "A calculator that plots functions, built using C++.",
-        "languages": "C++",
-        "outcome": "GUI-based plotting tool"
-    },
-    {
-        "name": "Local Web Marketplace",
-        "date": "November 2024",
-        "image": "./assets/images/webProject.png",
-        "description": "A UCSD student marketplace for buying and selling items.",
-        "languages": "React, TypeScript, SQL",
-        "outcome": "Full marketplace with auth"
-    }
-];
-
 class ProjectCard extends HTMLElement {
     constructor() {
         super();
@@ -228,11 +206,16 @@ function createProjectCards(projectArray) {
 }
 
 document.getElementById('load-local').addEventListener('click', () => {
-    createProjectCards(localProjects);
+    fetch('./assets/data/projects.json')
+        .then(response => response.json())
+        .then(data => {
+            createProjectCards(data);
+        })
+        .catch(err => console.error('Error loading local JSON:', err));
 });
 
 document.getElementById('load-remote').addEventListener('click', () => {
-    fetch('https://my-json-server.typicode.com/YourUser/YourRepo/projects')
+    fetch('http://my-json-server.typicode.com/datungLA/CSE134-HW5/projects')
         .then(response => response.json())
         .then(data => {
             createProjectCards(data);
