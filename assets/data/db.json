@@ -1,18 +1,20 @@
-[
-    {
-        "name": "Hello Calculator",
-        "date": "January 2022",
-        "image": "./assets/images/graphingCalculator.png",
-        "description": "A calculator that plots mathematical functions, built using C++.",
-        "languages": "C++",
-        "outcome": "Successfully implemented a GUI-based plotting tool."
-    },
-    {
-        "name": "Web Marketplace",
-        "date": "November 2024",
-        "image": "./assets/images/webProject.png",
-        "description": "A UCSD student marketplace for buying and selling items.",
-        "languages": "React, TypeScript, SQL",
-        "outcome": "A fully functional marketplace with authentication."
-    }
-]
+{
+    "projects": [
+        {
+            "name": "Hello Calculator",
+            "date": "January 2022",
+            "image": "./assets/images/graphingCalculator.png",
+            "description": "A calculator that plots mathematical functions, built using C++.",
+            "languages": "C++",
+            "outcome": "Successfully implemented a GUI-based plotting tool."
+        },
+        {
+            "name": "Web Marketplace",
+            "date": "November 2024",
+            "image": "./assets/images/webProject.png",
+            "description": "A UCSD student marketplace for buying and selling items.",
+            "languages": "React, TypeScript, SQL",
+            "outcome": "A fully functional marketplace with authentication."
+        }
+    ]
+}
