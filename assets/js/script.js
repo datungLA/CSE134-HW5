@@ -151,3 +151,93 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+// Example local data array (Option A). 
+// If using localStorage, see Option B code snippet above.
+const localProjects = [
+    {
+        "name": "Local Graphing Calculator",
+        "date": "January 2022",
+        "image": "./assets/images/graphingCalculator.png",
+        "description": "A calculator that plots functions, built using C++.",
+        "languages": "C++",
+        "outcome": "GUI-based plotting tool"
+    },
+    {
+        "name": "Local Web Marketplace",
+        "date": "November 2024",
+        "image": "./assets/images/webProject.png",
+        "description": "A UCSD student marketplace for buying and selling items.",
+        "languages": "React, TypeScript, SQL",
+        "outcome": "Full marketplace with auth"
+    }
+];
+
+class ProjectCard extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        const projectName = this.getAttribute('name') || 'Project Name';
+        const projectDate = this.getAttribute('date') || 'Date Unknown';
+        const projectImage = this.getAttribute('image') || '';
+        const projectDesc = this.getAttribute('description') || 'No description available';
+        const projectLang = this.getAttribute('languages') || '';
+        const projectOutcome = this.getAttribute('outcome') || '';
+
+        this.innerHTML = `
+        <article class="project-card">
+          <div class="project-info mixed-color">
+            <h1 class="wider-color">${projectName}</h1>
+            <p>${projectDesc}</p>
+            <p><strong>Date:</strong> ${projectDate}</p>
+            ${projectLang
+                ? `<p><strong>Languages Used:</strong> ${projectLang}</p>`
+                : ''
+            }
+            ${projectOutcome
+                ? `<p><strong>Outcome:</strong> ${projectOutcome}</p>`
+                : ''
+            }
+          </div>
+          <div class="project-media">
+            <img src="${projectImage}" alt="${projectName}" />
+          </div>
+        </article>
+      `;
+    }
+}
+
+customElements.define('project-card', ProjectCard);
+
+function createProjectCards(projectArray) {
+    const container = document.querySelector('.projects-grid');
+    container.innerHTML = '';
+    projectArray.forEach(project => {
+        const card = document.createElement('project-card');
+        card.setAttribute('name', project.name);
+        card.setAttribute('date', project.date);
+        card.setAttribute('image', project.image);
+        card.setAttribute('description', project.description);
+        card.setAttribute('languages', project.languages);
+        card.setAttribute('outcome', project.outcome);
+        container.appendChild(card);
+    });
+}
+
+document.getElementById('load-local').addEventListener('click', () => {
+    createProjectCards(localProjects);
+});
+
+document.getElementById('load-remote').addEventListener('click', () => {
+    fetch('https://my-json-server.typicode.com/YourUser/YourRepo/projects')
+        .then(response => response.json())
+        .then(data => {
+            createProjectCards(data);
+        })
+        .catch(err => {
+            console.error('Error fetching remote data:', err);
+        });
+});
