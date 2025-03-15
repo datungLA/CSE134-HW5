@@ -205,17 +205,22 @@ function createProjectCards(projectArray) {
     });
 }
 
+
 document.getElementById('load-local').addEventListener('click', () => {
     fetch('./assets/data/projects.json')
         .then(response => response.json())
         .then(data => {
+            // Store the fetched projects in localStorage
+            localStorage.setItem('projects', JSON.stringify(data));
+
+            // Create the project cards on the page
             createProjectCards(data);
         })
         .catch(err => console.error('Error loading local JSON:', err));
 });
 
 document.getElementById('load-remote').addEventListener('click', () => {
-    fetch('http://my-json-server.typicode.com/datungLA/CSE134-HW5/projects')
+    fetch('https://my-json-server.typicode.com/datungLA/CSE134-HW5/projects')
         .then(response => response.json())
         .then(data => {
             createProjectCards(data);
