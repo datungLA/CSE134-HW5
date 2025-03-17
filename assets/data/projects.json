@@ -14,5 +14,21 @@
         "description": "A UCSD student marketplace for buying and selling items.",
         "languages": "React, TypeScript, SQL",
         "outcome": "A fully functional marketplace with authentication."
+    },
+    {
+        "name": "Local Custom SQL Database Engine",
+        "date": "March 2023",
+        "image": "./assets/images/sql.png",
+        "description": "A C++ project implementing data structures like BST from scratch, tokenizing user input, and executing SQL commands to create tables.",
+        "languages": "C++",
+        "outcome": "Successfully built a terminal-based SQL database engine with command parsing."
+    },
+    {
+        "name": "Personal Portfolio Website",
+        "date": "March 2025",
+        "image": "./assets/images/portfolio.png",
+        "description": "A personal portfolio website built using pure HTML, CSS, and JavaScript to showcase projects, skills, and resume.",
+        "languages": "HTML, CSS, JavaScript",
+        "outcome": "Successfully created a fully responsive portfolio with a light/dark mode toggle and interactive navigation."
     }
 ]

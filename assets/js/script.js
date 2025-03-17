@@ -210,10 +210,7 @@ document.getElementById('load-local').addEventListener('click', () => {
     fetch('./assets/data/projects.json')
         .then(response => response.json())
         .then(data => {
-            // Store the fetched projects in localStorage
             localStorage.setItem('projects', JSON.stringify(data));
-
-            // Create the project cards on the page
             createProjectCards(data);
         })
         .catch(err => console.error('Error loading local JSON:', err));
